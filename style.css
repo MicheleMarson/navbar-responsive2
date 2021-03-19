@@ -1,0 +1,140 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: lightgray;
+}
+
+.nav-left{
+    text-shadow: 3px 3px 4px rgb(153, 146, 146);
+}
+
+.nav-left-span{
+    color: rgb(81, 186, 251);
+}
+
+nav{
+    background: whitesmoke;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+nav li{
+    list-style: none;
+}
+
+
+.nav-right ul{
+    display: flex;
+}
+
+.nav-right ul li{
+    padding: 0 10px 0 10px;
+}
+
+.nav-toggle{
+    background: none;
+    border: none;
+    display: none;
+    font-size: 2rem;
+}
+
+.links ul{
+    font-weight: 1.6rem;
+    display: flex;
+    letter-spacing: 5px;
+}
+
+.links ul li,.apps ul li{
+    padding: 0 20px 0 20px;
+    font-size: 1.4rem;
+    transition: .3s ease-in;
+}
+
+.links ul li:hover{
+    cursor: pointer;
+    color: rgb(81, 186, 251);
+}
+
+.nav-center{
+    font-size: 2rem;
+}
+
+.apps ul{
+    color: rgb(81, 186, 251);
+    display: flex;
+}
+
+.apps ul li i{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.apps ul li:hover{
+    color: rgb(161, 215, 248);
+}
+
+/* toggle class */
+
+
+.nav-toggle{
+    transition: .5s ease-in;
+    color: rgb(81, 186, 251);
+}
+
+.nav-toggle:hover{
+    transform: rotate(-90deg);
+    color: black;
+}
+
+@media screen and (max-width: 1200px){
+    .nav-center{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    .nav-toggle{
+        display: block;
+    }
+
+    .links ul li:hover{
+        padding-left: 60px;
+        padding-right: 30px;
+        background: rgb(81, 186, 251);
+        color: white;
+    }
+
+    .links{
+        height: 0;
+        overflow: hidden;
+        transition: .4s ease-in;
+    }
+
+    .show-links{
+        height: 13rem;
+        transition:all .5s ease-in-out;
+    }
+
+    nav{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .apps{
+        display: none;
+    }
+
+    .links ul{
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .links ul li{
+        font-size: 1.2rem;
+        color: rgb(93, 106, 119);
+        padding: 10px 40px 10px 40px;
+    }
+}
